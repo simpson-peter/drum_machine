@@ -10,7 +10,7 @@ class AppData extends ChangeNotifier {
   //Stores the drum pattern designed by the user, begins silent
   Map<int, Map<Instrument, bool>> _pattern;
   //Beats per minute
-  int _bpm = 180;
+  int bpm = 180;
   //Track whether the machine is playing
   bool playing = false;
 
@@ -69,7 +69,7 @@ class AppData extends ChangeNotifier {
     _playBeat();
 
     //Calculate time (milliseconds) to next beat
-    double waitTimeMS = 1000 / (_bpm.toDouble() / 60.0);
+    double waitTimeMS = 1000 / (bpm.toDouble() / 60.0);
     Timer(Duration(milliseconds: waitTimeMS.toInt()), tick);
   }
 

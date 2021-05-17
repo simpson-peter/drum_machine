@@ -1,7 +1,10 @@
 import 'package:drum_machine/constants.dart';
+import 'package:drum_machine/data/app_data.dart';
 import 'package:drum_machine/widgets/beat_readout.dart';
+import 'package:drum_machine/widgets/bpm_readout.dart';
 import 'package:drum_machine/widgets/instrument_readout.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class DrumMachine extends StatefulWidget {
   @override
@@ -37,6 +40,10 @@ class _DrumMachineState extends State<DrumMachine> {
                 height: kButtonMargin,
               ),
               InstrumentReadout(instrument: Instrument.Cymbal),
+              SizedBox(
+                height: kButtonMargin,
+              ),
+              BPMReadout(bpm: Provider.of<AppData>(context, listen: true).bpm),
               SizedBox(
                 height: kButtonMargin,
               ),

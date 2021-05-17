@@ -12,10 +12,13 @@ class BPMReadoutDigit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: kBPMDigitBoxWidth,
       color: Colors.black,
-      child: Text(
-        hasDigit ? digit : '',
-        style: kBPMTextStyle,
+      child: Center(
+        child: Text(
+          hasDigit ? digit : '',
+          style: kBPMTextStyle,
+        ),
       ),
     );
   }

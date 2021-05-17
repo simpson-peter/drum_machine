@@ -36,21 +36,21 @@ class _BPMReadoutState extends State<BPMReadout> {
             digit: bpmHundDig.toString(),
           ),
           SizedBox(
-            width: kButtonMargin,
+            width: kBPMDigitMargin,
           ),
           BPMReadoutDigit(
             hasDigit: true,
             digit: bpmTenDig.toString(),
           ),
           SizedBox(
-            width: kButtonMargin,
+            width: kBPMDigitMargin,
           ),
           BPMReadoutDigit(
             hasDigit: true,
             digit: bpmOneDig.toString(),
           ),
           SizedBox(
-            width: kButtonMargin,
+            width: kBPMDigitMargin,
           ),
         ],
       ),
