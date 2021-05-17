@@ -1,5 +1,7 @@
 import 'package:drum_machine/data/app_data.dart';
+import 'package:drum_machine/instrument_player.dart';
 import 'package:flutter/material.dart';
+import 'constants.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -13,8 +15,10 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => AppData(),
       child: MaterialApp(
-        home: Expanded(
-          child: ,
+        home: Scaffold(
+          body: Container(
+            color: Colors.red,
+          ),
         ),
       ),
     );

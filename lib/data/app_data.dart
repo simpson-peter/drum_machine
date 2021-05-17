@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:drum_machine/constants.dart';
 
@@ -26,6 +25,13 @@ class AppData extends ChangeNotifier {
     }
   }
 
+  //Plays the sounds associated with the current beat
+  void _playBeat() {
+    for (Instrument instrument in _pattern[_beat].keys) {
+      if (_pattern[_beat][instrument]) {}
+    }
+  }
+
   //Increment the beat, wait the proper amount of time, then trigger the next beat
   void tick() {
     _beat++;
@@ -35,6 +41,7 @@ class AppData extends ChangeNotifier {
     }
 
     notifyListeners();
+    _playBeat();
 
     //Calculate time (milliseconds) to next beat
     double waitTimeMS = 1000 / (_bpm.toDouble() / 60.0);

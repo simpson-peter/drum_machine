@@ -7,7 +7,7 @@ enum Instrument {
   Cymbal,
 }
 
-const Map<Instrument, String> kInstrumentPaths = {
+const Map<Instrument, String> kInstrumentAudioPaths = {
   Instrument.Kick:
       'https://petersimpson.me/hosting/drum_machine_assets/wtc_kick.wav',
   Instrument.Cymbal:
