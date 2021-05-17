@@ -7,6 +7,12 @@ enum Instrument {
   Cymbal,
 }
 
+const Map<Instrument, String> kInstrumentPaths = {
+  Instrument.Kick: 'wtc_kick.wav',
+  Instrument.Cymbal: 'wtc_cymb.wav',
+  Instrument.Snare: 'wtc_snare.wave',
+};
+
 //Technical constants
 //Number (1-indexed) of beats per measure
 const int kBeatsPerMeasure = 4;
