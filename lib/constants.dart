@@ -42,6 +42,11 @@ const TextStyle kLabelTextStyle = TextStyle(
   color: Colors.black,
   fontWeight: FontWeight.w900,
 );
+const TextStyle kBPMTextStyle = TextStyle(
+  fontSize: 32,
+  color: Color(0xFFcf0000),
+  fontFamily: 'Ds',
+);
 
 //Layout Constants
 const double kButtonWidth = 75;

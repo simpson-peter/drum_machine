@@ -26,6 +26,5 @@ class MachineButton extends StatelessWidget {
         ),
       ],
     );
-    ;
   }
 }
