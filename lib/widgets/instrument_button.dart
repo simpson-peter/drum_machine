@@ -10,8 +10,6 @@ class InstrumentButton extends StatefulWidget {
   final int beat;
   //Tracks which instrument this button is associated with
   final Instrument instrument;
-  //Tracks whether this button is on or off
-  bool on = false;
 
   InstrumentButton({@required this.beat, @required this.instrument});
 
@@ -20,6 +18,8 @@ class InstrumentButton extends StatefulWidget {
 }
 
 class _InstrumentButtonState extends State<InstrumentButton> {
+  //Tracks whether this button is on or off
+  bool on = false;
   @override
   Widget build(BuildContext context) {
     return MachineButton(
@@ -28,7 +28,7 @@ class _InstrumentButtonState extends State<InstrumentButton> {
           Provider.of<AppData>(context, listen: false)
               .changePattern(instrument: widget.instrument, beat: widget.beat);
           setState(() {
-            widget.on = !widget.on;
+            on = !on;
           });
         },
         child: Container(
@@ -42,10 +42,8 @@ class _InstrumentButtonState extends State<InstrumentButton> {
                 height: kButtonMargin,
               ),
               Icon(
-                widget.on
-                    ? Icons.radio_button_checked
-                    : Icons.radio_button_unchecked,
-                color: widget.on ? kHighlightColor : Colors.black,
+                on ? Icons.radio_button_checked : Icons.radio_button_unchecked,
+                color: on ? kHighlightColor : Colors.black,
               ),
               SizedBox(
                 height: kButtonMargin,

@@ -10,7 +10,9 @@ class AppData extends ChangeNotifier {
   //Stores the drum pattern designed by the user, begins silent
   Map<int, Map<Instrument, bool>> _pattern;
   //Beats per minute
-  int _bpm = 120;
+  int _bpm = 180;
+  //Track whether the machine is playing
+  bool playing = false;
 
   Map<Instrument, InstrumentPlayer> instrumentPlayers = {
     Instrument.Kick: InstrumentPlayer(instrument: Instrument.Kick),
@@ -30,9 +32,6 @@ class AppData extends ChangeNotifier {
       _pattern[i][Instrument.Snare] = false;
       _pattern[i][Instrument.Cymbal] = false;
     }
-
-    //TODO: Start ticking either here or call tick() somewhere in the app
-    tick();
   }
 
   //Plays the sounds associated with the current beat
@@ -44,8 +43,21 @@ class AppData extends ChangeNotifier {
     }
   }
 
+  //Inverts the current play/pause state, beginning beat tick if now playing
+  void playPause() {
+    playing = !playing;
+    notifyListeners();
+    if (playing) {
+      tick();
+    }
+  }
+
   //Increment the beat, wait the proper amount of time, then trigger the next beat
   void tick() {
+    if (!playing) {
+      beat = 0;
+      return;
+    }
     beat++;
     //Restart the loop if we've finished
     if (beat > kTotalBeats) {

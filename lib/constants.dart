@@ -45,5 +45,5 @@ const TextStyle kLabelTextStyle = TextStyle(
 
 //Layout Constants
 const double kButtonWidth = 75;
-const double kButtonMargin = 5;
+const double kButtonMargin = 10;
 const double kBorderRadius = 10;
