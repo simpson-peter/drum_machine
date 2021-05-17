@@ -8,9 +8,12 @@ enum Instrument {
 }
 
 const Map<Instrument, String> kInstrumentPaths = {
-  Instrument.Kick: 'wtc_kick.wav',
-  Instrument.Cymbal: 'wtc_cymb.wav',
-  Instrument.Snare: 'wtc_snare.wave',
+  Instrument.Kick:
+      'https://petersimpson.me/hosting/drum_machine_assets/wtc_kick.wav',
+  Instrument.Cymbal:
+      'https://petersimpson.me/hosting/drum_machine_assets/wtc_cymb.wav',
+  Instrument.Snare:
+      'https://petersimpson.me/hosting/drum_machine_assets/wtc_snare.wav',
 };
 
 //Technical constants
