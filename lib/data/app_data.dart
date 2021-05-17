@@ -10,7 +10,7 @@ class AppData extends ChangeNotifier {
   //Stores the drum pattern designed by the user, begins silent
   Map<int, Map<Instrument, bool>> _pattern;
   //Beats per minute
-  int _bpm = 60;
+  int _bpm = 120;
 
   Map<Instrument, InstrumentPlayer> instrumentPlayers = {
     Instrument.Kick: InstrumentPlayer(instrument: Instrument.Kick),

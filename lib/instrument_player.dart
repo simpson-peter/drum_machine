@@ -15,6 +15,5 @@ class InstrumentPlayer {
 
   void playSound() {
     _audioPlayer.play(this._assetPath, isLocal: false);
-    print('played ' + this._assetPath);
   }
 }

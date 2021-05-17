@@ -40,6 +40,7 @@ const Color kHighlightColor = Color(0xFFD2042D);
 const TextStyle kLabelTextStyle = TextStyle(
   fontSize: 16,
   color: Colors.black,
+  fontWeight: FontWeight.w900,
 );
 
 //Layout Constants

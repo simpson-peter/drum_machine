@@ -24,6 +24,7 @@ class BeatButton extends StatelessWidget {
             ),
             Text(
               beat.toString(),
+              style: kLabelTextStyle,
             ),
             Icon(
               on ? Icons.radio_button_checked : Icons.radio_button_unchecked,
