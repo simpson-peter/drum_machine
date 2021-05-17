@@ -13,7 +13,7 @@ class BeatReadout extends StatefulWidget {
 class _BeatReadoutState extends State<BeatReadout> {
   //Helper method to build the list of beat buttons which comprise the beatredout
   List<Widget> buildBeatReadout(BuildContext context) {
-    List<BeatButton> beatButtons = new List(8);
+    List<BeatButton> beatButtons = List.filled(kTotalBeats, null);
     for (int i = 0; i < kTotalBeats; i++) {
       beatButtons[i] = BeatButton(
           beat: i + 1,
