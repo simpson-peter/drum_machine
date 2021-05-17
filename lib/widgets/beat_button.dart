@@ -19,12 +19,18 @@ class BeatButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(kBorderRadius)),
         child: Column(
           children: [
+            SizedBox(
+              height: kButtonMargin,
+            ),
             Text(
               beat.toString(),
             ),
             Icon(
               on ? Icons.radio_button_checked : Icons.radio_button_unchecked,
               color: on ? kHighlightColor : Colors.black,
+            ),
+            SizedBox(
+              height: kButtonMargin,
             ),
           ],
         ),

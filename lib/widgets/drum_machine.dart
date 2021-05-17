@@ -13,30 +13,39 @@ class _DrumMachineState extends State<DrumMachine> {
   Widget build(BuildContext context) {
     return Container(
       color: kBackgroundColor,
-      child: Center(
-        child: Column(
-          children: [
-            SizedBox(
-              height: kButtonMargin,
-            ),
-            BeatReadout(),
-            SizedBox(
-              height: kButtonMargin,
-            ),
-            InstrumentReadout(instrument: Instrument.Kick),
-            SizedBox(
-              height: kButtonMargin,
-            ),
-            InstrumentReadout(instrument: Instrument.Snare),
-            SizedBox(
-              height: kButtonMargin,
-            ),
-            InstrumentReadout(instrument: Instrument.Cymbal),
-            SizedBox(
-              height: kButtonMargin,
-            ),
-          ],
-        ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SizedBox(
+            width: 1,
+          ),
+          Column(
+            children: [
+              SizedBox(
+                height: kButtonMargin,
+              ),
+              BeatReadout(),
+              SizedBox(
+                height: kButtonMargin,
+              ),
+              InstrumentReadout(instrument: Instrument.Kick),
+              SizedBox(
+                height: kButtonMargin,
+              ),
+              InstrumentReadout(instrument: Instrument.Snare),
+              SizedBox(
+                height: kButtonMargin,
+              ),
+              InstrumentReadout(instrument: Instrument.Cymbal),
+              SizedBox(
+                height: kButtonMargin,
+              ),
+            ],
+          ),
+          SizedBox(
+            width: 1,
+          ),
+        ],
       ),
     );
   }
