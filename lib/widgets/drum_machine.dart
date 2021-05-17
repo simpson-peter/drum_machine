@@ -16,10 +16,25 @@ class _DrumMachineState extends State<DrumMachine> {
       child: Center(
         child: Column(
           children: [
+            SizedBox(
+              height: kButtonMargin,
+            ),
             BeatReadout(),
+            SizedBox(
+              height: kButtonMargin,
+            ),
             InstrumentReadout(instrument: Instrument.Kick),
+            SizedBox(
+              height: kButtonMargin,
+            ),
             InstrumentReadout(instrument: Instrument.Snare),
+            SizedBox(
+              height: kButtonMargin,
+            ),
             InstrumentReadout(instrument: Instrument.Cymbal),
+            SizedBox(
+              height: kButtonMargin,
+            ),
           ],
         ),
       ),

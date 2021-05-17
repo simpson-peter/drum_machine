@@ -41,11 +41,17 @@ class _InstrumentButtonState extends State<InstrumentButton> {
                 borderRadius: BorderRadius.circular(kBorderRadius)),
             child: Column(
               children: [
+                SizedBox(
+                  height: kButtonMargin,
+                ),
                 Icon(
                   widget.on
                       ? Icons.radio_button_checked
                       : Icons.radio_button_unchecked,
                   color: widget.on ? kHighlightColor : Colors.black,
+                ),
+                SizedBox(
+                  height: kButtonMargin,
                 ),
               ],
             ),
