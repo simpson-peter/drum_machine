@@ -1,9 +1,13 @@
 import 'package:drum_machine/data/app_data.dart';
-import 'package:drum_machine/instrument_player.dart';
 import 'package:drum_machine/widgets/drum_machine.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'package:provider/provider.dart';
+
+/*
+* MAJOR TODOs
+* TODO: Fix bug where rapidly playing/pausing screws up beat counting
+*/
 
 void main() {
   runApp(MyApp());

@@ -52,5 +52,5 @@ const TextStyle kBPMTextStyle = TextStyle(
 const double kButtonWidth = 75;
 const double kButtonMargin = 10;
 const double kBorderRadius = 10;
-const double kBPMDigitBoxWidth = 20;
+const double kBPMDigitBoxWidth = 25;
 const double kBPMDigitMargin = 2;

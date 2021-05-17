@@ -1,8 +1,8 @@
 import 'package:drum_machine/constants.dart';
 import 'package:drum_machine/data/app_data.dart';
-import 'package:drum_machine/widgets/beat_readout.dart';
-import 'package:drum_machine/widgets/bpm_readout.dart';
-import 'package:drum_machine/widgets/instrument_readout.dart';
+import 'package:drum_machine/widgets/beat/beat_readout.dart';
+import 'package:drum_machine/widgets/bpm/bpm_readout.dart';
+import 'package:drum_machine/widgets/instrument/instrument_readout.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

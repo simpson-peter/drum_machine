@@ -34,6 +34,11 @@ class AppData extends ChangeNotifier {
     }
   }
 
+  void setBPM(int newBPM) {
+    this.bpm = newBPM;
+    notifyListeners();
+  }
+
   //Plays the sounds associated with the current beat
   void _playBeat() {
     for (Instrument instrument in _pattern[beat].keys) {
