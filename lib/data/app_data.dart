@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:drum_machine/instrument_player.dart';
 import 'package:flutter/material.dart';
 import 'package:drum_machine/constants.dart';
 
@@ -10,6 +11,12 @@ class AppData extends ChangeNotifier {
   Map<int, Map<Instrument, bool>> _pattern;
   //Beats per minute
   int _bpm = 60;
+
+  Map<Instrument, InstrumentPlayer> instrumentPlayers = {
+    Instrument.Kick: InstrumentPlayer(instrument: Instrument.Kick),
+    Instrument.Snare: InstrumentPlayer(instrument: Instrument.Snare),
+    Instrument.Cymbal: InstrumentPlayer(instrument: Instrument.Cymbal)
+  };
 
   AppData() {
     //Initialize the pattern map to be empty
@@ -31,7 +38,9 @@ class AppData extends ChangeNotifier {
   //Plays the sounds associated with the current beat
   void _playBeat() {
     for (Instrument instrument in _pattern[beat].keys) {
-      if (_pattern[beat][instrument]) {}
+      if (_pattern[beat][instrument]) {
+        instrumentPlayers[instrument].playSound();
+      }
     }
   }
 
