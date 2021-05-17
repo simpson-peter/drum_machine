@@ -12,8 +12,8 @@ enum Instrument {
 const int kBeatsPerMeasure = 4;
 //Number (1-indexed) of measures in the loop
 const int kNumMeasures = 2;
-//Number (1-indexed) of beats per loop
-
+//Number (1-indexed) of beats per loop (must be = kBeatsPerMeasure * kNumMeasures)
+const int kTotalBeats = 8;
 
 //Color constants
 const Color kBackgroundColor = Color(0x1b1a17);
