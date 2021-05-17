@@ -1,6 +1,7 @@
 import 'package:drum_machine/constants.dart';
 import 'package:drum_machine/data/app_data.dart';
 import 'package:drum_machine/widgets/beat_button.dart';
+import 'package:drum_machine/widgets/button_spacer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -13,12 +14,13 @@ class BeatReadout extends StatefulWidget {
 class _BeatReadoutState extends State<BeatReadout> {
   //Helper method to build the list of beat buttons which comprise the beatredout
   List<Widget> buildBeatReadout(BuildContext context) {
-    List<BeatButton> beatButtons = List.filled(kTotalBeats, null);
-    for (int i = 0; i < kTotalBeats; i++) {
+    List<Widget> beatButtons = List.filled(kTotalBeats + 1, null);
+    beatButtons[0] = ButtonSpacer();
+    for (int i = 1; i <= kTotalBeats; i++) {
       beatButtons[i] = BeatButton(
-          beat: i + 1,
+          beat: i,
           //Tie the status of the button to the current beat as kept by provider
-          on: Provider.of<AppData>(context, listen: true).beat == (i + 1));
+          on: Provider.of<AppData>(context, listen: true).beat == i);
     }
     return beatButtons;
   }

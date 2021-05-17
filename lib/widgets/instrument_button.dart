@@ -1,4 +1,5 @@
 import 'package:drum_machine/data/app_data.dart';
+import 'package:drum_machine/widgets/machine_button.dart';
 import 'package:flutter/material.dart';
 import 'package:drum_machine/constants.dart';
 import 'package:provider/provider.dart';
@@ -21,46 +22,38 @@ class InstrumentButton extends StatefulWidget {
 class _InstrumentButtonState extends State<InstrumentButton> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        SizedBox(
-          width: kButtonMargin,
-        ),
-        GestureDetector(
-          onTap: () {
-            Provider.of<AppData>(context, listen: false).changePattern(
-                instrument: widget.instrument, beat: widget.beat);
-            setState(() {
-              widget.on = !widget.on;
-            });
-          },
-          child: Container(
-            width: kButtonWidth,
-            decoration: BoxDecoration(
-                color: kButtonColor,
-                borderRadius: BorderRadius.circular(kBorderRadius)),
-            child: Column(
-              children: [
-                SizedBox(
-                  height: kButtonMargin,
-                ),
-                Icon(
-                  widget.on
-                      ? Icons.radio_button_checked
-                      : Icons.radio_button_unchecked,
-                  color: widget.on ? kHighlightColor : Colors.black,
-                ),
-                SizedBox(
-                  height: kButtonMargin,
-                ),
-              ],
-            ),
+    return MachineButton(
+      child: GestureDetector(
+        onTap: () {
+          Provider.of<AppData>(context, listen: false)
+              .changePattern(instrument: widget.instrument, beat: widget.beat);
+          setState(() {
+            widget.on = !widget.on;
+          });
+        },
+        child: Container(
+          width: kButtonWidth,
+          decoration: BoxDecoration(
+              color: kButtonColor,
+              borderRadius: BorderRadius.circular(kBorderRadius)),
+          child: Column(
+            children: [
+              SizedBox(
+                height: kButtonMargin,
+              ),
+              Icon(
+                widget.on
+                    ? Icons.radio_button_checked
+                    : Icons.radio_button_unchecked,
+                color: widget.on ? kHighlightColor : Colors.black,
+              ),
+              SizedBox(
+                height: kButtonMargin,
+              ),
+            ],
           ),
         ),
-        SizedBox(
-          width: kButtonMargin,
-        ),
-      ],
+      ),
     );
     ;
   }

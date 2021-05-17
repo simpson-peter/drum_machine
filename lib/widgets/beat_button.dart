@@ -1,4 +1,5 @@
 import 'package:drum_machine/constants.dart';
+import 'package:drum_machine/widgets/machine_button.dart';
 import 'package:flutter/material.dart';
 
 class BeatButton extends StatelessWidget {
@@ -10,32 +11,24 @@ class BeatButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        SizedBox(
-          width: kButtonMargin,
+    return MachineButton(
+      child: Container(
+        width: kButtonWidth,
+        decoration: BoxDecoration(
+            color: kButtonColor,
+            borderRadius: BorderRadius.circular(kBorderRadius)),
+        child: Column(
+          children: [
+            Text(
+              beat.toString(),
+            ),
+            Icon(
+              on ? Icons.radio_button_checked : Icons.radio_button_unchecked,
+              color: on ? kHighlightColor : Colors.black,
+            ),
+          ],
         ),
-        Container(
-          width: kButtonWidth,
-          decoration: BoxDecoration(
-              color: kButtonColor,
-              borderRadius: BorderRadius.circular(kBorderRadius)),
-          child: Column(
-            children: [
-              Text(
-                beat.toString(),
-              ),
-              Icon(
-                on ? Icons.radio_button_checked : Icons.radio_button_unchecked,
-                color: on ? kHighlightColor : Colors.black,
-              ),
-            ],
-          ),
-        ),
-        SizedBox(
-          width: kButtonMargin,
-        ),
-      ],
+      ),
     );
   }
 }
