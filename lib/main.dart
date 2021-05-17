@@ -18,9 +18,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         home: Scaffold(
           body: Container(
-            child: Expanded(
-              child: DrumMachine(),
-            ),
+            child: DrumMachine(),
           ),
         ),
       ),

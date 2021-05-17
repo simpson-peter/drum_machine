@@ -1,4 +1,5 @@
 import 'package:drum_machine/constants.dart';
+import 'package:drum_machine/widgets/beat_readout.dart';
 import 'package:flutter/material.dart';
 
 class DrumMachine extends StatefulWidget {
@@ -13,7 +14,15 @@ class _DrumMachineState extends State<DrumMachine> {
       color: kBackgroundColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [],
+        children: [
+          Text(
+            'Hello',
+            style: TextStyle(
+              fontSize: 100,
+            ),
+          ),
+          BeatReadout(),
+        ],
       ),
     );
   }

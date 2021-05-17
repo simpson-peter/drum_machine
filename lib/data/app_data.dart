@@ -5,7 +5,7 @@ import 'package:drum_machine/constants.dart';
 //Class which tracks cross-app data, utilized by Provider ChangeNotifier instance
 class AppData extends ChangeNotifier {
   //Tracks the beat [1, kTotalBeats] which the loop is currently on
-  int _beat = 0;
+  int beat = 0;
   //Stores the drum pattern designed by the user, begins silent
   Map<int, Map<Instrument, bool>> _pattern;
   //Beats per minute
@@ -23,21 +23,23 @@ class AppData extends ChangeNotifier {
       _pattern[i][Instrument.Snare] = false;
       _pattern[i][Instrument.Cymbal] = false;
     }
+
+    //TODO: Start ticking either here or call tick() somewhere in the app
   }
 
   //Plays the sounds associated with the current beat
   void _playBeat() {
-    for (Instrument instrument in _pattern[_beat].keys) {
-      if (_pattern[_beat][instrument]) {}
+    for (Instrument instrument in _pattern[beat].keys) {
+      if (_pattern[beat][instrument]) {}
     }
   }
 
   //Increment the beat, wait the proper amount of time, then trigger the next beat
   void tick() {
-    _beat++;
+    beat++;
     //Restart the loop if we've finished
-    if (_beat > kTotalBeats) {
-      _beat = 0;
+    if (beat > kTotalBeats) {
+      beat = 1;
     }
 
     notifyListeners();
