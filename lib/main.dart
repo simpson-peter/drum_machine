@@ -1,5 +1,6 @@
 import 'package:drum_machine/data/app_data.dart';
 import 'package:drum_machine/instrument_player.dart';
+import 'package:drum_machine/widgets/drum_machine.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'package:provider/provider.dart';
@@ -17,7 +18,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         home: Scaffold(
           body: Container(
-            color: Colors.red,
+            child: Expanded(
+              child: DrumMachine(),
+            ),
           ),
         ),
       ),

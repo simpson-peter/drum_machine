@@ -25,11 +25,10 @@ const int kNumMeasures = 2;
 const int kTotalBeats = 8;
 
 //Color constants
-const Color kBackgroundColor = Color(0x1b1a17);
-const Color kForeGroundColor = Color(0xa35709);
-const Color kButtonColor = Color(0xf0e3ca);
-const Color kHighlightColor = Color(0xff8303);
+const Color kBackgroundColor = Color(0xFFf5efdc);
+const Color kForeGroundColor = Color(0xFFa35709);
+const Color kButtonColor = Color(0xFFf0e3ca);
+const Color kHighlightColor = Color(0xFFD2042D);
 
 //Layout Constants
-const double kLineMargin = 24;
-const double kInteriorMargin = 24;
+const double kEdgeMargin = 50;
