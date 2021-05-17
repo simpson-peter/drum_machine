@@ -17,7 +17,9 @@ class BeatButton extends StatelessWidget {
         ),
         Container(
           width: kButtonWidth,
-          color: kButtonColor,
+          decoration: BoxDecoration(
+              color: kButtonColor,
+              borderRadius: BorderRadius.circular(kBorderRadius)),
           child: Column(
             children: [
               Text(

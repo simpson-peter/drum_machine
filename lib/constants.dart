@@ -33,3 +33,4 @@ const Color kHighlightColor = Color(0xFFD2042D);
 //Layout Constants
 const double kButtonWidth = 75;
 const double kButtonMargin = 5;
+const double kBorderRadius = 10;
