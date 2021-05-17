@@ -1,7 +1,26 @@
 import 'package:flutter/material.dart';
 
+//Enum used to track the differing kinds of instruments
+enum Instrument {
+  Kick,
+  Snare,
+  Cymbal,
+}
+
+//Technical constants
+//Number (1-indexed) of beats per measure
+const int kBeatsPerMeasure = 4;
+//Number (1-indexed) of measures in the loop
+const int kNumMeasures = 2;
+//Number (1-indexed) of beats per loop
+
+
+//Color constants
 const Color kBackgroundColor = Color(0x1b1a17);
 const Color kForeGroundColor = Color(0xa35709);
 const Color kButtonColor = Color(0xf0e3ca);
 const Color kHighlightColor = Color(0xff8303);
-const int kLineMargin = 24;
+
+//Layout Constants
+const double kLineMargin = 24;
+const double kInteriorMargin = 24;
