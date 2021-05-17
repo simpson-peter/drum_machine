@@ -12,17 +12,12 @@ class _DrumMachineState extends State<DrumMachine> {
   Widget build(BuildContext context) {
     return Container(
       color: kBackgroundColor,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'Hello',
-            style: TextStyle(
-              fontSize: 100,
-            ),
-          ),
-          BeatReadout(),
-        ],
+      child: Center(
+        child: Column(
+          children: [
+            BeatReadout(),
+          ],
+        ),
       ),
     );
   }

@@ -10,20 +10,30 @@ class BeatButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: kButtonWidth,
-      color: kButtonColor,
-      child: Column(
-        children: [
-          Text(
-            beat.toString(),
+    return Row(
+      children: [
+        SizedBox(
+          width: kButtonMargin,
+        ),
+        Container(
+          width: kButtonWidth,
+          color: kButtonColor,
+          child: Column(
+            children: [
+              Text(
+                beat.toString(),
+              ),
+              Icon(
+                on ? Icons.radio_button_checked : Icons.radio_button_unchecked,
+                color: on ? kHighlightColor : Colors.black,
+              ),
+            ],
           ),
-          Icon(
-            on ? Icons.radio_button_checked : Icons.radio_button_unchecked,
-            color: on ? kHighlightColor : Colors.black,
-          ),
-        ],
-      ),
+        ),
+        SizedBox(
+          width: kButtonMargin,
+        ),
+      ],
     );
   }
 }

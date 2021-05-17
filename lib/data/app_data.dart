@@ -25,6 +25,7 @@ class AppData extends ChangeNotifier {
     }
 
     //TODO: Start ticking either here or call tick() somewhere in the app
+    tick();
   }
 
   //Plays the sounds associated with the current beat
