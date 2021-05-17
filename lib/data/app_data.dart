@@ -56,6 +56,7 @@ class AppData extends ChangeNotifier {
   void tick() {
     if (!playing) {
       beat = 0;
+      notifyListeners();
       return;
     }
     beat++;
