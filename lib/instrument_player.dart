@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
@@ -11,6 +10,7 @@ class InstrumentPlayer {
 
   InstrumentPlayer({@required this.instrument}) {
     _assetPath = kInstrumentAudioPaths[this.instrument];
+    _audioPlayer.play(this._assetPath, isLocal: false, volume: 0);
   }
 
   void playSound() {
