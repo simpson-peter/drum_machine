@@ -34,6 +34,7 @@ class PauseButton extends StatelessWidget {
                     ),
                     Icon(
                       playing ? Icons.pause : Icons.play_arrow,
+                      color: dark,
                     ),
                     SizedBox(
                       height: kButtonMargin,

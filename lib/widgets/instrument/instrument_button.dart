@@ -37,7 +37,7 @@ class _InstrumentButtonState extends State<InstrumentButton> {
               borderRadius: BorderRadius.circular(kBorderRadius)),
           child: Icon(
             on ? Icons.radio_button_checked : Icons.radio_button_unchecked,
-            color: on ? kHighlightColor : Colors.black,
+            color: on ? kRedLightColor : Colors.black,
           ),
         ),
       ),

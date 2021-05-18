@@ -24,36 +24,49 @@ class _BPMReadoutState extends State<BPMReadout> {
     return Container(
       color: kBackgroundColor,
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            'BPM',
+          SizedBox(
+            width: 1,
+          ),
+          Container(
+            child: Row(
+              children: [
+                Text(
+                  'BPM',
+                  style: kLabelTextStyle,
+                ),
+                SizedBox(
+                  width: kButtonMargin,
+                ),
+                BPMReadoutDigit(
+                  hasDigit: bpmHundDig != 0,
+                  digit: bpmHundDig.toString(),
+                ),
+                SizedBox(
+                  width: kBPMDigitMargin,
+                ),
+                BPMReadoutDigit(
+                  hasDigit: true,
+                  digit: bpmTenDig.toString(),
+                ),
+                SizedBox(
+                  width: kBPMDigitMargin,
+                ),
+                BPMReadoutDigit(
+                  hasDigit: true,
+                  digit: bpmOneDig.toString(),
+                ),
+                SizedBox(
+                  width: kButtonMargin,
+                ),
+                BPMModulator(),
+              ],
+            ),
           ),
           SizedBox(
-            width: kButtonMargin,
+            width: 1,
           ),
-          BPMReadoutDigit(
-            hasDigit: bpmHundDig != 0,
-            digit: bpmHundDig.toString(),
-          ),
-          SizedBox(
-            width: kBPMDigitMargin,
-          ),
-          BPMReadoutDigit(
-            hasDigit: true,
-            digit: bpmTenDig.toString(),
-          ),
-          SizedBox(
-            width: kBPMDigitMargin,
-          ),
-          BPMReadoutDigit(
-            hasDigit: true,
-            digit: bpmOneDig.toString(),
-          ),
-          SizedBox(
-            width: kButtonMargin,
-          ),
-          BPMModulator(),
         ],
       ),
     );
