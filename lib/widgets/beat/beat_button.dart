@@ -12,8 +12,8 @@ class BeatButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MachineButton(
+      borderRadius: 0,
       child: Container(
-        width: kButtonWidth,
         decoration: BoxDecoration(
             color: kButtonColor,
             borderRadius: BorderRadius.circular(kBorderRadius)),

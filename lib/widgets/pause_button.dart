@@ -11,29 +11,38 @@ class PauseButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MachineButton(
-      child: GestureDetector(
-        onTap: () {
-          Provider.of<AppData>(context, listen: false).playPause();
-        },
-        child: Container(
-          width: kButtonWidth,
-          decoration: BoxDecoration(
-              color: kButtonColor,
-              borderRadius: BorderRadius.circular(kBorderRadius)),
-          child: Column(
-            children: [
-              SizedBox(
-                height: kButtonMargin,
+    return Expanded(
+      child: Container(
+        color: kBackgroundColor,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () {
+                Provider.of<AppData>(context, listen: false).playPause();
+              },
+              child: Container(
+                width: 50,
+                decoration: BoxDecoration(
+                    color: kHighlightColor,
+                    borderRadius: BorderRadius.circular(kBorderRadius)),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      height: kButtonMargin,
+                    ),
+                    Icon(
+                      playing ? Icons.pause : Icons.play_arrow,
+                    ),
+                    SizedBox(
+                      height: kButtonMargin,
+                    ),
+                  ],
+                ),
               ),
-              Icon(
-                playing ? Icons.pause : Icons.play_arrow,
-              ),
-              SizedBox(
-                height: kButtonMargin,
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

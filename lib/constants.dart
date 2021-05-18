@@ -35,7 +35,7 @@ const int kTotalBeats = 8;
 const Color kBackgroundColor = Color(0xFFf5efdc);
 const Color kForeGroundColor = Color(0xFFa35709);
 const Color kButtonColor = Color(0xFFf0e3ca);
-const Color kHighlightColor = Color(0xFFD2042D);
+const Color kHighlightColor = Color(0xFFff8303);
 //Text constants
 const TextStyle kLabelTextStyle = TextStyle(
   fontSize: 16,
@@ -49,8 +49,9 @@ const TextStyle kBPMTextStyle = TextStyle(
 );
 
 //Layout Constants
-const double kButtonWidth = 75;
 const double kButtonMargin = 10;
 const double kBorderRadius = 10;
 const double kBPMDigitBoxWidth = 25;
 const double kBPMDigitMargin = 2;
+const double kButtonHeight = 90;
+const double kPageEdgeMargin = 40;

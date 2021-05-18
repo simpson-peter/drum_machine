@@ -11,16 +11,11 @@ class Nameplate extends StatelessWidget {
   Widget build(BuildContext context) {
     return MachineButton(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(
-            height: kButtonMargin,
-          ),
           Text(
             kInstrumentNameMap[this.instrument],
             style: kLabelTextStyle,
-          ),
-          SizedBox(
-            height: kButtonMargin,
           ),
         ],
       ),

@@ -16,41 +16,32 @@ class _DrumMachineState extends State<DrumMachine> {
   Widget build(BuildContext context) {
     return Container(
       color: kBackgroundColor,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      padding: EdgeInsets.symmetric(horizontal: kPageEdgeMargin, vertical: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           SizedBox(
-            width: 1,
+            height: kButtonMargin,
           ),
-          Column(
-            children: [
-              SizedBox(
-                height: kButtonMargin,
-              ),
-              BeatReadout(),
-              SizedBox(
-                height: kButtonMargin,
-              ),
-              InstrumentReadout(instrument: Instrument.Kick),
-              SizedBox(
-                height: kButtonMargin,
-              ),
-              InstrumentReadout(instrument: Instrument.Snare),
-              SizedBox(
-                height: kButtonMargin,
-              ),
-              InstrumentReadout(instrument: Instrument.Cymbal),
-              SizedBox(
-                height: kButtonMargin,
-              ),
-              BPMReadout(bpm: Provider.of<AppData>(context, listen: true).bpm),
-              SizedBox(
-                height: kButtonMargin,
-              ),
-            ],
-          ),
+          BeatReadout(),
           SizedBox(
-            width: 1,
+            height: kButtonMargin,
+          ),
+          InstrumentReadout(instrument: Instrument.Kick),
+          SizedBox(
+            height: kButtonMargin,
+          ),
+          InstrumentReadout(instrument: Instrument.Snare),
+          SizedBox(
+            height: kButtonMargin,
+          ),
+          InstrumentReadout(instrument: Instrument.Cymbal),
+          SizedBox(
+            height: kButtonMargin,
+          ),
+          BPMReadout(bpm: Provider.of<AppData>(context, listen: true).bpm),
+          SizedBox(
+            height: kButtonMargin,
           ),
         ],
       ),

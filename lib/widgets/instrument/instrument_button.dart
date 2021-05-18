@@ -32,23 +32,12 @@ class _InstrumentButtonState extends State<InstrumentButton> {
           });
         },
         child: Container(
-          width: kButtonWidth,
           decoration: BoxDecoration(
               color: kButtonColor,
               borderRadius: BorderRadius.circular(kBorderRadius)),
-          child: Column(
-            children: [
-              SizedBox(
-                height: kButtonMargin,
-              ),
-              Icon(
-                on ? Icons.radio_button_checked : Icons.radio_button_unchecked,
-                color: on ? kHighlightColor : Colors.black,
-              ),
-              SizedBox(
-                height: kButtonMargin,
-              ),
-            ],
+          child: Icon(
+            on ? Icons.radio_button_checked : Icons.radio_button_unchecked,
+            color: on ? kHighlightColor : Colors.black,
           ),
         ),
       ),

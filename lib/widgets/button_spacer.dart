@@ -11,7 +11,6 @@ class ButtonSpacer extends StatelessWidget {
           width: kButtonMargin,
         ),
         Container(
-          width: kButtonWidth,
           decoration: BoxDecoration(
             color: kButtonColor,
             borderRadius: BorderRadius.circular(kBorderRadius),
