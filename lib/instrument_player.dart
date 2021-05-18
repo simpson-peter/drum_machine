@@ -10,6 +10,7 @@ class InstrumentPlayer {
 
   InstrumentPlayer({@required this.instrument}) {
     _assetPath = kInstrumentAudioPaths[this.instrument];
+    //Play the asset at zero-volume in order to pre-load it
     _audioPlayer.play(this._assetPath, isLocal: false, volume: 0);
   }
 
