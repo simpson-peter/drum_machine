@@ -23,6 +23,7 @@ class _InstrumentButtonState extends State<InstrumentButton> {
   @override
   Widget build(BuildContext context) {
     return MachineButton(
+      margin: EdgeInsets.only(left: kButtonMargin),
       child: GestureDetector(
         onTap: () {
           Provider.of<AppData>(context, listen: false)
@@ -35,9 +36,17 @@ class _InstrumentButtonState extends State<InstrumentButton> {
           decoration: BoxDecoration(
               color: kButtonColor,
               borderRadius: BorderRadius.circular(kBorderRadius)),
-          child: Icon(
-            on ? Icons.radio_button_checked : Icons.radio_button_unchecked,
-            color: on ? kRedLightColor : Colors.black,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Icon(
+                on ? Icons.radio_button_checked : Icons.radio_button_unchecked,
+                color: on ? kRedLightColor : Colors.black,
+              ),
+              SizedBox(
+                height: kButtonMargin,
+              ),
+            ],
           ),
         ),
       ),

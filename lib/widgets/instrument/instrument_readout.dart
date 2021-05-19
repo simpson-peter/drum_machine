@@ -30,7 +30,6 @@ class _InstrumentReadoutState extends State<InstrumentReadout> {
     return Container(
       color: kBackgroundColor,
       child: Row(
-        //TODO: Include Instrument nameplate
         children: buildInstrumentReadout(),
       ),
     );

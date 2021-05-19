@@ -20,11 +20,13 @@ class BeatButton extends StatelessWidget {
     }
     return MachineButton(
       borderRadius: 0,
+      padding: EdgeInsets.only(left: kButtonMargin),
       child: Container(
         decoration: BoxDecoration(
             color: kButtonColor,
             borderRadius: BorderRadius.circular(kBorderRadius)),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
               height: kButtonMargin,
@@ -34,8 +36,9 @@ class BeatButton extends StatelessWidget {
               style: kLabelTextStyle,
             ),
             Icon(
-              on ? Icons.radio_button_checked : Icons.radio_button_unchecked,
-              color: on ? kHighlightColor : Colors.black,
+              on ? Icons.circle : Icons.radio_button_unchecked,
+              color: on ? kRedLightColor : Colors.black,
+              size: 15,
             ),
             SizedBox(
               height: kButtonMargin,
