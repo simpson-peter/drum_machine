@@ -16,7 +16,10 @@ class KitSelectorButton extends StatelessWidget {
         Provider.of<AppData>(context, listen: false).setKit(this.kit);
       },
       child: Container(
-        color: kDarkForeground,
+        decoration: BoxDecoration(
+          color: kDarkForeground,
+          borderRadius: BorderRadius.all(Radius.circular(kBorderRadius / 2)),
+        ),
         width: 150,
         child: Row(
           children: [
@@ -36,9 +39,6 @@ class KitSelectorButton extends StatelessWidget {
                 kKitNameMap[this.kit],
                 style: kLabelTextStyle,
               ),
-            ),
-            SizedBox(
-              width: kButtonMargin,
             ),
           ],
         ),

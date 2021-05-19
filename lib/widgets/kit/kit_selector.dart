@@ -12,7 +12,10 @@ class KitSelector extends StatelessWidget {
     kit = Provider.of<AppData>(context, listen: true).kit;
     return Container(
       height: kButtonHeight,
-      color: kButtonColor,
+      decoration: BoxDecoration(
+        color: kButtonColor,
+        borderRadius: BorderRadius.circular(kBorderRadius),
+      ),
       padding: EdgeInsets.symmetric(horizontal: kButtonMargin),
       //TODO: Wrap with row
       child: Row(
