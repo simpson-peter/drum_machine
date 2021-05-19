@@ -73,8 +73,8 @@ class AppData extends ChangeNotifier {
     notifyListeners();
     _playBeat();
 
-    //Calculate time (milliseconds) to next beat
-    double waitTimeMS = 1000 / (bpm.toDouble() / 60.0);
+    //Calculate time (milliseconds) to next 1/8th note
+    double waitTimeMS = (1000 / (bpm.toDouble() / 60.0)) / 2.0;
     Timer(Duration(milliseconds: waitTimeMS.toInt()), tick);
   }
 

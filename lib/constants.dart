@@ -31,7 +31,6 @@ const int kNumMeasures = 2;
 const int kTotalBeats = 16;
 
 //Style constants
-const double borderThickness = 3;
 //Color constants
 const Color kBackgroundColor = Color(0xFFf5efdc);
 const Color kForeGroundColor = Color(0xFFa35709);
@@ -52,6 +51,7 @@ const TextStyle kBPMTextStyle = TextStyle(
 );
 
 //Layout Constants
+const double kBorderThickness = 3;
 const double kButtonMargin = 10;
 const double kBorderRadius = 10;
 const double kBPMDigitBoxWidth = 35;

@@ -12,7 +12,7 @@ class BeatButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String beatDisplay;
-    //Only display quarter notes
+    //Only display labels for quarter notes
     if (beat % 2 == 1) {
       beatDisplay = ((beat / 2) + 1).toInt().toString();
     } else {

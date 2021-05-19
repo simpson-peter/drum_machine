@@ -31,7 +31,7 @@ class _BeatReadoutState extends State<BeatReadout> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(width: kBorderRadius),
+        border: Border.all(width: kBorderThickness),
         color: kBackgroundColor,
       ),
       child: Row(
