@@ -8,7 +8,6 @@ import 'kit_selector_button.dart';
 class KitSelector extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Kit kit = Provider.of<AppData>(context, listen: true).kit;
     return Container(
       height: kButtonHeight,
       decoration: BoxDecoration(
@@ -16,7 +15,6 @@ class KitSelector extends StatelessWidget {
         borderRadius: BorderRadius.circular(kBorderRadius),
       ),
       padding: EdgeInsets.symmetric(horizontal: kButtonMargin),
-      //TODO: Wrap with row
       child: Row(
         children: [
           Text(
