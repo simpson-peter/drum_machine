@@ -6,10 +6,9 @@ import 'package:provider/provider.dart';
 import 'kit_selector_button.dart';
 
 class KitSelector extends StatelessWidget {
-  Kit kit;
   @override
   Widget build(BuildContext context) {
-    kit = Provider.of<AppData>(context, listen: true).kit;
+    Kit kit = Provider.of<AppData>(context, listen: true).kit;
     return Container(
       height: kButtonHeight,
       decoration: BoxDecoration(
