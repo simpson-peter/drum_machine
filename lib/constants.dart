@@ -32,12 +32,14 @@ const int kTotalBeats = 16;
 
 //Style constants
 //Color constants
-const Color kBackgroundColor = Color(0xFFf5efdc);
-const Color kForeGroundColor = Color(0xFFa35709);
+const Color kBackgroundColor = Color(0xFF3b3b3b);
+const Color kForegroundColor = Color(0xFFf5efdc);
 const Color kButtonColor = Color(0xFFf0e3ca);
 const Color dark = Color(0xFF1b1a17);
 const Color kHighlightColor = Color(0xFFff8303);
 const Color kRedLightColor = Color(0xFFcf0000);
+const Color kRedLightOffColor = Color(0xFF600000);
+
 //Text constants
 const TextStyle kLabelTextStyle = TextStyle(
   fontSize: 16,
@@ -48,6 +50,12 @@ const TextStyle kBPMTextStyle = TextStyle(
   fontSize: 46,
   color: Color(0xFFcf0000),
   fontFamily: 'Ds',
+);
+const TextStyle kLogoTextStyle = TextStyle(
+  fontSize: 50,
+  color: kHighlightColor,
+  fontFamily: 'Orbitron',
+  fontWeight: FontWeight.bold,
 );
 
 //Layout Constants

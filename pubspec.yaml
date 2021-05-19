@@ -50,3 +50,6 @@ flutter:
     - family: Ds
       fonts:
         - asset: lib/assets/fonts/DS-DIGII.TTF
+    - family: Orbitron
+      fonts:
+        - asset: lib/assets/fonts/Orbitron-Medium.ttf

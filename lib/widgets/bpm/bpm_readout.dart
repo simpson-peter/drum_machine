@@ -24,7 +24,7 @@ class _BPMReadoutState extends State<BPMReadout> {
     int bpmOneDig = widget.bpm % 10;
     return Container(
       decoration: BoxDecoration(
-        color: kBackgroundColor,
+        color: kForegroundColor,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -35,7 +35,10 @@ class _BPMReadoutState extends State<BPMReadout> {
           Container(
             padding: EdgeInsets.all(kButtonMargin),
             decoration: BoxDecoration(
-              border: Border.all(width: kBorderThickness),
+              border: Border.all(
+                width: kBorderThickness,
+                color: kBackgroundColor,
+              ),
             ),
             child: Row(
               children: [

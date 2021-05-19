@@ -29,7 +29,7 @@ class _InstrumentReadoutState extends State<InstrumentReadout> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: kBackgroundColor,
+        color: kForegroundColor,
       ),
       child: Row(
         children: buildInstrumentReadout(),

@@ -6,6 +6,8 @@ import 'package:drum_machine/widgets/instrument/instrument_readout.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'logo.dart';
+
 class DrumMachine extends StatefulWidget {
   @override
   _DrumMachineState createState() => _DrumMachineState();
@@ -15,18 +17,22 @@ class _DrumMachineState extends State<DrumMachine> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xFF3b3b3b),
+      color: kBackgroundColor,
       padding: EdgeInsets.symmetric(horizontal: kPageEdgeMargin, vertical: 10),
       child: Container(
         margin: EdgeInsets.only(bottom: 40),
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: kBackgroundColor,
+          color: kForegroundColor,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            SizedBox(
+              height: kButtonMargin,
+            ),
+            Logo(),
             SizedBox(
               height: kButtonMargin,
             ),

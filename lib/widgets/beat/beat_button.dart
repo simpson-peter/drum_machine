@@ -1,6 +1,7 @@
 import 'package:drum_machine/constants.dart';
 import 'package:drum_machine/widgets/machine_button.dart';
 import 'package:flutter/material.dart';
+import '../logo.dart';
 
 class BeatButton extends StatelessWidget {
   //Stores the beat which this button represents (which 1/8th note the beat is)
@@ -37,7 +38,7 @@ class BeatButton extends StatelessWidget {
             ),
             Icon(
               on ? Icons.circle : Icons.circle,
-              color: on ? kRedLightColor : Color(0xFF600000),
+              color: on ? kRedLightColor : kRedLightOffColor,
               size: 15,
             ),
             SizedBox(
