@@ -20,11 +20,12 @@ class BeatButton extends StatelessWidget {
       beatDisplay = ' ';
     }
     return MachineButton(
+      color: kDarkForeground,
       borderRadius: 0,
       padding: EdgeInsets.only(left: kButtonMargin),
       child: Container(
         decoration: BoxDecoration(
-            color: kButtonColor,
+            color: kDarkForeground,
             borderRadius: BorderRadius.circular(kBorderRadius)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

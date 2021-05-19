@@ -34,7 +34,8 @@ const int kTotalBeats = 16;
 //Color constants
 const Color kBackgroundColor = Color(0xFF3b3b3b);
 const Color kForegroundColor = Color(0xFFf5efdc);
-const Color kButtonColor = Color(0xFFf0e3ca);
+const Color kDarkForeground = Color(0xFFf0e3ca);
+const Color kButtonColor = Color(0xFFe8d4ae);
 const Color dark = Color(0xFF1b1a17);
 const Color kHighlightColor = Color(0xFFff8303);
 const Color kRedLightColor = Color(0xFFcf0000);

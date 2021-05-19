@@ -11,6 +11,7 @@ import 'package:provider/provider.dart';
 * TOOD: Remove Halo from BPMModulator
 * TODO: Remove outline from around play/pause container
 * TODO: Logo looks washed-out against background
+* TODO: Right edge of BeatReadout isn't rounded
 */
 
 void main() {

@@ -31,11 +31,8 @@ class _BeatReadoutState extends State<BeatReadout> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(
-          width: kBorderThickness,
-          color: kBackgroundColor,
-        ),
-        color: kForegroundColor,
+        color: kDarkForeground,
+        borderRadius: BorderRadius.circular(kBorderRadius),
       ),
       child: Row(
         children: buildBeatReadout(context),

@@ -13,7 +13,7 @@ class PauseButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        color: kForegroundColor,
+        color: kDarkForeground,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

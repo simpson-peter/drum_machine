@@ -7,12 +7,14 @@ class MachineButton extends StatelessWidget {
   final double borderRadius;
   final EdgeInsetsGeometry margin;
   final EdgeInsetsGeometry padding;
+  final Color color;
 
   MachineButton({
     @required this.child,
     this.borderRadius = kBorderRadius,
     this.margin = const EdgeInsets.all(0),
     this.padding = const EdgeInsets.all(0),
+    this.color = kButtonColor,
   });
 
   @override
@@ -23,7 +25,7 @@ class MachineButton extends StatelessWidget {
         height: kButtonHeight,
         margin: this.margin,
         decoration: BoxDecoration(
-          color: kButtonColor,
+          color: this.color,
           borderRadius: BorderRadius.circular(this.borderRadius),
         ),
         child: child,
