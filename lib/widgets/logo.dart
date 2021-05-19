@@ -6,6 +6,10 @@ class Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: kDarkForeground,
+        borderRadius: BorderRadius.circular(kBorderRadius),
+      ),
       child: Row(
         children: [
           SizedBox(

@@ -40,7 +40,7 @@ class BeatButton extends StatelessWidget {
             Icon(
               on ? Icons.circle : Icons.circle,
               color: on ? kRedLightColor : kRedLightOffColor,
-              size: 15,
+              size: kSmallLEDSize,
             ),
             SizedBox(
               height: kButtonMargin,
