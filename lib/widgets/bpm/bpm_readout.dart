@@ -1,6 +1,7 @@
 import 'package:drum_machine/constants.dart';
 import 'package:drum_machine/widgets/bpm/bpm_modulator.dart';
 import 'package:drum_machine/widgets/bpm/bpm_readout_digit.dart';
+import 'package:drum_machine/constants.dart';
 import 'package:flutter/material.dart';
 
 class BPMReadout extends StatefulWidget {
@@ -22,7 +23,9 @@ class _BPMReadoutState extends State<BPMReadout> {
     //1s digit of the bpm
     int bpmOneDig = widget.bpm % 10;
     return Container(
-      color: kBackgroundColor,
+      decoration: BoxDecoration(
+        color: kBackgroundColor,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -30,6 +33,10 @@ class _BPMReadoutState extends State<BPMReadout> {
             width: 1,
           ),
           Container(
+            padding: EdgeInsets.all(kButtonMargin),
+            decoration: BoxDecoration(
+              border: Border.all(width: kBorderThickness),
+            ),
             child: Row(
               children: [
                 Text(
