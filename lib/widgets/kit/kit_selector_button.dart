@@ -15,26 +15,33 @@ class KitSelectorButton extends StatelessWidget {
       onTap: () {
         Provider.of<AppData>(context, listen: false).setKit(this.kit);
       },
-      child: Row(
-        children: [
-          SizedBox(
-            width: kButtonMargin,
-          ),
-          Icon(
-            Icons.circle,
-            color: this.isSelected ? kRedLightColor : kRedLightOffColor,
-            size: kSmallLEDSize,
-          ),
-          SizedBox(
-            width: kButtonMargin,
-          ),
-          Container(
-            color: kDarkForeground,
-            child: Text(
-              kKitNameMap[this.kit],
+      child: Container(
+        color: kDarkForeground,
+        width: 150,
+        child: Row(
+          children: [
+            SizedBox(
+              width: kButtonMargin,
             ),
-          ),
-        ],
+            Icon(
+              Icons.circle,
+              color: this.isSelected ? kRedLightColor : kRedLightOffColor,
+              size: kSmallLEDSize,
+            ),
+            SizedBox(
+              width: kButtonMargin,
+            ),
+            Container(
+              child: Text(
+                kKitNameMap[this.kit],
+                style: kLabelTextStyle,
+              ),
+            ),
+            SizedBox(
+              width: kButtonMargin,
+            ),
+          ],
+        ),
       ),
     );
   }

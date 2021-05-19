@@ -31,9 +31,6 @@ class _DrumMachineState extends State<DrumMachine> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Logo(),
-            SizedBox(
-              height: kButtonMargin,
-            ),
             BeatReadout(),
             SizedBox(
               height: kButtonMargin,
@@ -50,11 +47,21 @@ class _DrumMachineState extends State<DrumMachine> {
             SizedBox(
               height: kButtonMargin,
             ),
-            BPMReadout(bpm: Provider.of<AppData>(context, listen: true).bpm),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                BPMReadout(
+                  bpm: Provider.of<AppData>(context, listen: true).bpm,
+                ),
+                SizedBox(
+                  width: kButtonMargin,
+                ),
+                KitSelector(),
+              ],
+            ),
             SizedBox(
               height: kButtonMargin,
             ),
-            KitSelector(),
           ],
         ),
       ),

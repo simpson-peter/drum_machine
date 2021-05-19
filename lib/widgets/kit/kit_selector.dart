@@ -10,19 +10,41 @@ class KitSelector extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     kit = Provider.of<AppData>(context, listen: true).kit;
-    return Column(
-      children: [
-        KitSelectorButton(
-          kit: Kit.OldSchool,
-          isSelected:
-              Provider.of<AppData>(context, listen: true).kit == Kit.OldSchool,
-        ),
-        KitSelectorButton(
-          kit: Kit.Trap,
-          isSelected:
-              Provider.of<AppData>(context, listen: true).kit == Kit.Trap,
-        ),
-      ],
+    return Container(
+      height: kButtonHeight,
+      color: kButtonColor,
+      padding: EdgeInsets.symmetric(horizontal: kButtonMargin),
+      //TODO: Wrap with row
+      child: Row(
+        children: [
+          Text(
+            'KIT',
+            style: kLabelTextStyle,
+          ),
+          SizedBox(
+            width: kButtonMargin,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              KitSelectorButton(
+                kit: Kit.OldSchool,
+                isSelected: Provider.of<AppData>(context, listen: true).kit ==
+                    Kit.OldSchool,
+              ),
+              SizedBox(
+                height: kButtonMargin,
+              ),
+              KitSelectorButton(
+                kit: Kit.Trap,
+                isSelected:
+                    Provider.of<AppData>(context, listen: true).kit == Kit.Trap,
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

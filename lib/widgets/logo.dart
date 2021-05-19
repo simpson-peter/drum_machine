@@ -8,12 +8,15 @@ class Logo extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: kDarkForeground,
-        borderRadius: BorderRadius.circular(kBorderRadius),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(kBorderRadius),
+          topRight: Radius.circular(kBorderRadius),
+        ),
       ),
       child: Row(
         children: [
           SizedBox(
-            width: kButtonMargin * 2,
+            width: kButtonMargin,
           ),
           Text(
             'FLUTTER TR-404',

@@ -32,7 +32,10 @@ class _BeatReadoutState extends State<BeatReadout> {
     return Container(
       decoration: BoxDecoration(
         color: kDarkForeground,
-        borderRadius: BorderRadius.circular(kBorderRadius),
+        borderRadius: BorderRadius.only(
+          bottomRight: Radius.circular(kBorderRadius),
+          bottomLeft: Radius.circular(kBorderRadius),
+        ),
       ),
       child: Row(
         children: buildBeatReadout(context),
