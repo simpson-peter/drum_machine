@@ -10,7 +10,6 @@ import 'package:provider/provider.dart';
 * TOOD: Remove Halo from BPMModulator
 * TODO: Logo looks washed-out against background
 * TODO: Bottom Right corner of BeatReadout isn't rounded
-* TODO: Fix Fonts (especially on kit selector)
 */
 
 void main() {
