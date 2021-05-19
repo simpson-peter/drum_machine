@@ -7,19 +7,41 @@ enum Instrument {
   Cymbal,
 }
 
-const Map<Instrument, String> kInstrumentAudioPaths = {
-  Instrument.Kick:
-      'https://petersimpson.me/hosting/drum_machine_assets/wtc_kick.wav',
-  Instrument.Cymbal:
-      'https://petersimpson.me/hosting/drum_machine_assets/wtc_cymb.wav',
-  Instrument.Snare:
-      'https://petersimpson.me/hosting/drum_machine_assets/wtc_snare.wav',
+enum Kit {
+  OldSchool,
+  Trap,
+  House,
+}
+
+const Map<Kit, Map<Instrument, String>> kInstrumentAudioPaths = {
+  Kit.OldSchool: {
+    Instrument.Kick:
+        'https://petersimpson.me/hosting/drum_machine_assets/wtc/wtc_kick.wav',
+    Instrument.Cymbal:
+        'https://petersimpson.me/hosting/drum_machine_assets/wtc/wtc_cymb2.wav',
+    Instrument.Snare:
+        'https://petersimpson.me/hosting/drum_machine_assets/wtc/wtc_snare.wav',
+  },
+  Kit.Trap: {
+    Instrument.Kick:
+        'https://petersimpson.me/hosting/drum_machine_assets/trap/trap_kick.wav',
+    Instrument.Cymbal:
+        'https://petersimpson.me/hosting/drum_machine_assets/trap/trap_cymb.wav',
+    Instrument.Snare:
+        'https://petersimpson.me/hosting/drum_machine_assets/trap/trap_snare.wav',
+  },
 };
 
 const Map<Instrument, String> kInstrumentNameMap = {
   Instrument.Kick: 'KICK',
   Instrument.Snare: 'SNARE',
-  Instrument.Cymbal: 'CYMBAL',
+  Instrument.Cymbal: 'HI-HAT',
+};
+
+const Map<Kit, String> kKitNameMap = {
+  Kit.OldSchool: 'Old School',
+  Kit.Trap: 'Trap',
+  Kit.House: 'House',
 };
 
 //Technical constants

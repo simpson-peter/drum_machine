@@ -15,9 +15,12 @@ class AppData extends ChangeNotifier {
   bool playing = false;
 
   Map<Instrument, InstrumentPlayer> instrumentPlayers = {
-    Instrument.Kick: InstrumentPlayer(instrument: Instrument.Kick),
-    Instrument.Snare: InstrumentPlayer(instrument: Instrument.Snare),
-    Instrument.Cymbal: InstrumentPlayer(instrument: Instrument.Cymbal)
+    Instrument.Kick:
+        InstrumentPlayer(instrument: Instrument.Kick, kit: Kit.Trap),
+    Instrument.Snare:
+        InstrumentPlayer(instrument: Instrument.Snare, kit: Kit.Trap),
+    Instrument.Cymbal:
+        InstrumentPlayer(instrument: Instrument.Cymbal, kit: Kit.Trap),
   };
 
   AppData() {

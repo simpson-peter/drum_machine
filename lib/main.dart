@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => AppData(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter TR-404 Drum Machine',
         theme: ThemeData(
           fontFamily: 'Exo',
