@@ -56,6 +56,7 @@ const TextStyle kLogoTextStyle = TextStyle(
   color: kHighlightColor,
   fontFamily: 'Orbitron',
   fontWeight: FontWeight.bold,
+  letterSpacing: 4,
 );
 
 //Layout Constants

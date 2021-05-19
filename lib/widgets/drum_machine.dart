@@ -29,9 +29,6 @@ class _DrumMachineState extends State<DrumMachine> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(
-              height: kButtonMargin,
-            ),
             Logo(),
             SizedBox(
               height: kButtonMargin,
