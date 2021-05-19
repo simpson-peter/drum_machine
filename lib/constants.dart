@@ -24,13 +24,14 @@ const Map<Instrument, String> kInstrumentNameMap = {
 
 //Technical constants
 //Number (1-indexed) of beats per measure
-const int kBeatsPerMeasure = 4;
+const int kBeatsPerMeasure = 8;
 //Number (1-indexed) of measures in the loop
 const int kNumMeasures = 2;
 //Number (1-indexed) of beats per loop (must be = kBeatsPerMeasure * kNumMeasures)
-const int kTotalBeats = 8;
+const int kTotalBeats = 16;
 
 //Style constants
+const double borderThickness = 3;
 //Color constants
 const Color kBackgroundColor = Color(0xFFf5efdc);
 const Color kForeGroundColor = Color(0xFFa35709);

@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 /*
 * MAJOR TODOs
 * TODO: Fix bug where rapidly playing/pausing screws up beat counting
+* TODO: Add more drum packs
 */
 
 void main() {

@@ -15,35 +15,43 @@ class _DrumMachineState extends State<DrumMachine> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: kBackgroundColor,
+      color: Color(0xFF3b3b3b),
       padding: EdgeInsets.symmetric(horizontal: kPageEdgeMargin, vertical: 10),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          SizedBox(
-            height: kButtonMargin,
-          ),
-          BeatReadout(),
-          SizedBox(
-            height: kButtonMargin,
-          ),
-          InstrumentReadout(instrument: Instrument.Kick),
-          SizedBox(
-            height: kButtonMargin,
-          ),
-          InstrumentReadout(instrument: Instrument.Snare),
-          SizedBox(
-            height: kButtonMargin,
-          ),
-          InstrumentReadout(instrument: Instrument.Cymbal),
-          SizedBox(
-            height: kButtonMargin,
-          ),
-          BPMReadout(bpm: Provider.of<AppData>(context, listen: true).bpm),
-          SizedBox(
-            height: kButtonMargin,
-          ),
-        ],
+      child: Container(
+        margin: EdgeInsets.only(bottom: 40),
+        padding: EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: kBackgroundColor,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            SizedBox(
+              height: kButtonMargin,
+            ),
+            BeatReadout(),
+            SizedBox(
+              height: kButtonMargin,
+            ),
+            InstrumentReadout(instrument: Instrument.Kick),
+            SizedBox(
+              height: kButtonMargin,
+            ),
+            InstrumentReadout(instrument: Instrument.Snare),
+            SizedBox(
+              height: kButtonMargin,
+            ),
+            InstrumentReadout(instrument: Instrument.Cymbal),
+            SizedBox(
+              height: kButtonMargin,
+            ),
+            BPMReadout(bpm: Provider.of<AppData>(context, listen: true).bpm),
+            SizedBox(
+              height: kButtonMargin,
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -1,10 +1,8 @@
 import 'package:drum_machine/constants.dart';
 import 'package:drum_machine/data/app_data.dart';
 import 'package:drum_machine/widgets/beat/beat_button.dart';
-import 'package:drum_machine/widgets/button_spacer.dart';
 import 'package:drum_machine/widgets/pause_button.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:provider/provider.dart';
 
 //Widget which holds all of the BeatButtons, which in whole make the beat readout visual element
@@ -32,7 +30,10 @@ class _BeatReadoutState extends State<BeatReadout> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: kBackgroundColor,
+      decoration: BoxDecoration(
+        border: Border.all(width: kBorderRadius),
+        color: kBackgroundColor,
+      ),
       child: Row(
         children: buildBeatReadout(context),
       ),

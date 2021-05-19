@@ -3,7 +3,7 @@ import 'package:drum_machine/widgets/machine_button.dart';
 import 'package:flutter/material.dart';
 
 class BeatButton extends StatelessWidget {
-  //Stores the beat which this button represents
+  //Stores the beat which this button represents (which 1/8th note the beat is)
   final int beat;
   //Stores whether this is the current beat or not (on/off)
   final bool on;
@@ -11,6 +11,13 @@ class BeatButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String beatDisplay;
+    //Only display quarter notes
+    if (beat % 2 == 1) {
+      beatDisplay = ((beat / 2) + 1).toInt().toString();
+    } else {
+      beatDisplay = ' ';
+    }
     return MachineButton(
       borderRadius: 0,
       child: Container(
@@ -23,7 +30,7 @@ class BeatButton extends StatelessWidget {
               height: kButtonMargin,
             ),
             Text(
-              beat.toString(),
+              beatDisplay,
               style: kLabelTextStyle,
             ),
             Icon(
