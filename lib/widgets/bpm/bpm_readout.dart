@@ -50,15 +50,9 @@ class _BPMReadoutState extends State<BPMReadout> {
                   hasDigit: bpmHundDig != 0,
                   digit: bpmHundDig.toString(),
                 ),
-                SizedBox(
-                  width: kBPMDigitMargin,
-                ),
                 BPMReadoutDigit(
                   hasDigit: true,
                   digit: bpmTenDig.toString(),
-                ),
-                SizedBox(
-                  width: kBPMDigitMargin,
                 ),
                 BPMReadoutDigit(
                   hasDigit: true,

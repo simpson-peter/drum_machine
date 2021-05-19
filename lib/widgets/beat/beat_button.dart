@@ -36,8 +36,8 @@ class BeatButton extends StatelessWidget {
               style: kLabelTextStyle,
             ),
             Icon(
-              on ? Icons.circle : Icons.radio_button_unchecked,
-              color: on ? kRedLightColor : Colors.black,
+              on ? Icons.circle : Icons.circle,
+              color: on ? kRedLightColor : Color(0xFF600000),
               size: 15,
             ),
             SizedBox(

@@ -28,7 +28,9 @@ class _InstrumentReadoutState extends State<InstrumentReadout> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: kBackgroundColor,
+      decoration: BoxDecoration(
+        color: kBackgroundColor,
+      ),
       child: Row(
         children: buildInstrumentReadout(),
       ),

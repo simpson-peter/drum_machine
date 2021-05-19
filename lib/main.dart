@@ -8,6 +8,8 @@ import 'package:provider/provider.dart';
 * MAJOR TODOs
 * TODO: Fix bug where rapidly playing/pausing screws up beat counting
 * TODO: Add more drum packs
+* TOOD: Remove Halo from BPMModulator
+* TODO: Remove outline from around play/pause container
 */
 
 void main() {
