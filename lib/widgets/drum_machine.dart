@@ -3,7 +3,7 @@ import 'package:drum_machine/data/app_data.dart';
 import 'package:drum_machine/widgets/beat/beat_readout.dart';
 import 'package:drum_machine/widgets/bpm/bpm_readout.dart';
 import 'package:drum_machine/widgets/instrument/instrument_readout.dart';
-import 'package:drum_machine/widgets/kit_selector.dart';
+import 'package:drum_machine/widgets/kit/kit_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
