@@ -13,14 +13,16 @@ class AppData extends ChangeNotifier {
   int bpm = 180;
   //Track whether the machine is playing
   bool playing = false;
+  //Tracks the kit currently in use
+  Kit kit = Kit.OldSchool;
 
   Map<Instrument, InstrumentPlayer> instrumentPlayers = {
     Instrument.Kick:
-        InstrumentPlayer(instrument: Instrument.Kick, kit: Kit.Trap),
+        InstrumentPlayer(instrument: Instrument.Kick, kit: kInitialKit),
     Instrument.Snare:
-        InstrumentPlayer(instrument: Instrument.Snare, kit: Kit.Trap),
+        InstrumentPlayer(instrument: Instrument.Snare, kit: kInitialKit),
     Instrument.Cymbal:
-        InstrumentPlayer(instrument: Instrument.Cymbal, kit: Kit.Trap),
+        InstrumentPlayer(instrument: Instrument.Cymbal, kit: kInitialKit),
   };
 
   AppData() {
@@ -35,6 +37,19 @@ class AppData extends ChangeNotifier {
       _pattern[i][Instrument.Snare] = false;
       _pattern[i][Instrument.Cymbal] = false;
     }
+  }
+
+  void setKit(Kit newKit) {
+    this.kit = newKit;
+    notifyListeners();
+    //re-init the audio players
+    instrumentPlayers = {
+      Instrument.Kick: InstrumentPlayer(instrument: Instrument.Kick, kit: kit),
+      Instrument.Snare:
+          InstrumentPlayer(instrument: Instrument.Snare, kit: kit),
+      Instrument.Cymbal:
+          InstrumentPlayer(instrument: Instrument.Cymbal, kit: kit),
+    };
   }
 
   void setBPM(int newBPM) {

@@ -45,6 +45,8 @@ const Map<Kit, String> kKitNameMap = {
 };
 
 //Technical constants
+//Which drum kit the machine starts on
+const Kit kInitialKit = Kit.OldSchool;
 //Number (1-indexed) of beats per measure
 const int kBeatsPerMeasure = 8;
 //Number (1-indexed) of measures in the loop
