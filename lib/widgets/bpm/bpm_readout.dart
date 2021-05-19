@@ -4,7 +4,7 @@ import 'package:drum_machine/widgets/bpm/bpm_readout_digit.dart';
 import 'package:flutter/material.dart';
 
 class BPMReadout extends StatefulWidget {
-  int bpm;
+  final int bpm;
 
   BPMReadout({@required this.bpm});
 
