@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 * TODO: Add more drum packs
 * TOOD: Remove Halo from BPMModulator
 * TODO: Remove outline from around play/pause container
+* TODO: Logo looks washed-out against background
 */
 
 void main() {

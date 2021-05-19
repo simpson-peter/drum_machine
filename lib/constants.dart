@@ -67,3 +67,4 @@ const double kBPMDigitBoxWidth = 35;
 const double kBPMDigitMargin = 2;
 const double kButtonHeight = 90;
 const double kPageEdgeMargin = 40;
+const double kInstrumentButtonIconSize = 20;

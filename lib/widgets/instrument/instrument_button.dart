@@ -40,8 +40,9 @@ class _InstrumentButtonState extends State<InstrumentButton> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Icon(
-                on ? Icons.radio_button_checked : Icons.radio_button_unchecked,
-                color: on ? kRedLightColor : Colors.black,
+                on ? Icons.circle : Icons.circle,
+                color: on ? kRedLightColor : kRedLightOffColor,
+                size: kInstrumentButtonIconSize,
               ),
               SizedBox(
                 height: kButtonMargin,
