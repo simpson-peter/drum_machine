@@ -55,9 +55,9 @@ const Map<Instrument, String> kInstrumentNameMap = {
 };
 
 const Map<Kit, String> kKitNameMap = {
-  Kit.OldSchool: 'Old School',
-  Kit.Trap: 'Trap',
-  Kit.House: 'House',
+  Kit.OldSchool: 'OLD SCHOOL',
+  Kit.Trap: 'TRAP',
+  Kit.House: 'HOUSE',
 };
 
 //Technical constants
@@ -83,9 +83,11 @@ const Color kRedLightOffColor = Color(0xFF600000);
 
 //Text constants
 const TextStyle kLabelTextStyle = TextStyle(
-  fontSize: 16,
+  fontSize: 14,
   color: Colors.black,
   fontWeight: FontWeight.w900,
+  fontFamily: 'Roboto',
+  letterSpacing: 1,
 );
 const TextStyle kBPMTextStyle = TextStyle(
   fontSize: 46,
