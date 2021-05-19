@@ -35,6 +35,16 @@ const Map<Kit, Map<Instrument, String>> kInstrumentAudioPaths = {
     Instrument.Clap:
         'https://petersimpson.me/hosting/drum_machine_assets/trap/trap_clap.wav'
   },
+  Kit.House: {
+    Instrument.Kick:
+        'https://petersimpson.me/hosting/drum_machine_assets/house/house_kick.wav',
+    Instrument.Cymbal:
+        'https://petersimpson.me/hosting/drum_machine_assets/house/house_cymb.wav',
+    Instrument.Snare:
+        'https://petersimpson.me/hosting/drum_machine_assets/house/house_snare.wav',
+    Instrument.Clap:
+        'https://petersimpson.me/hosting/drum_machine_assets/house/house_clap.wav'
+  },
 };
 
 const Map<Instrument, String> kInstrumentNameMap = {

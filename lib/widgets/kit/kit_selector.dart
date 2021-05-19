@@ -37,12 +37,20 @@ class KitSelector extends StatelessWidget {
                     Kit.OldSchool,
               ),
               SizedBox(
-                height: kButtonMargin,
+                height: kButtonMargin / 2,
               ),
               KitSelectorButton(
                 kit: Kit.Trap,
                 isSelected:
                     Provider.of<AppData>(context, listen: true).kit == Kit.Trap,
+              ),
+              SizedBox(
+                height: kButtonMargin / 2,
+              ),
+              KitSelectorButton(
+                kit: Kit.House,
+                isSelected: Provider.of<AppData>(context, listen: true).kit ==
+                    Kit.House,
               ),
             ],
           ),
