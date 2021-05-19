@@ -52,6 +52,5 @@ class _InstrumentButtonState extends State<InstrumentButton> {
         ),
       ),
     );
-    ;
   }
 }

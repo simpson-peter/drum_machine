@@ -14,7 +14,7 @@ class AppData extends ChangeNotifier {
   //Track whether the machine is playing
   bool playing = false;
   //Tracks the kit currently in use
-  Kit kit = Kit.OldSchool;
+  Kit kit = kInitialKit;
 
   Map<Instrument, InstrumentPlayer> instrumentPlayers = {
     Instrument.Kick:
@@ -23,6 +23,8 @@ class AppData extends ChangeNotifier {
         InstrumentPlayer(instrument: Instrument.Snare, kit: kInitialKit),
     Instrument.Cymbal:
         InstrumentPlayer(instrument: Instrument.Cymbal, kit: kInitialKit),
+    Instrument.Clap:
+        InstrumentPlayer(instrument: Instrument.Clap, kit: kInitialKit),
   };
 
   AppData() {
@@ -35,6 +37,7 @@ class AppData extends ChangeNotifier {
       //Initialize each instrument for the beat
       _pattern[i][Instrument.Kick] = false;
       _pattern[i][Instrument.Snare] = false;
+      _pattern[i][Instrument.Clap] = false;
       _pattern[i][Instrument.Cymbal] = false;
     }
   }
@@ -47,6 +50,7 @@ class AppData extends ChangeNotifier {
       Instrument.Kick: InstrumentPlayer(instrument: Instrument.Kick, kit: kit),
       Instrument.Snare:
           InstrumentPlayer(instrument: Instrument.Snare, kit: kit),
+      Instrument.Clap: InstrumentPlayer(instrument: Instrument.Clap, kit: kit),
       Instrument.Cymbal:
           InstrumentPlayer(instrument: Instrument.Cymbal, kit: kit),
     };

@@ -37,7 +37,10 @@ class KitSelectorButton extends StatelessWidget {
             Container(
               child: Text(
                 kKitNameMap[this.kit],
-                style: kLabelTextStyle,
+                //TODO: Change to a better font
+                style: kLabelTextStyle.copyWith(
+                  fontWeight: FontWeight.normal,
+                ),
               ),
             ),
           ],

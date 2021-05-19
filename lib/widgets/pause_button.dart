@@ -2,7 +2,6 @@ import 'package:drum_machine/data/app_data.dart';
 import 'package:flutter/material.dart';
 import 'package:drum_machine/constants.dart';
 import 'package:provider/provider.dart';
-import 'machine_button.dart';
 
 class PauseButton extends StatelessWidget {
   final bool playing;

@@ -24,6 +24,5 @@ class ButtonSpacer extends StatelessWidget {
         ),
       ],
     );
-    ;
   }
 }

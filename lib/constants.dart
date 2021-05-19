@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 enum Instrument {
   Kick,
   Snare,
+  Clap,
   Cymbal,
 }
 
@@ -21,6 +22,8 @@ const Map<Kit, Map<Instrument, String>> kInstrumentAudioPaths = {
         'https://petersimpson.me/hosting/drum_machine_assets/wtc/wtc_cymb2.wav',
     Instrument.Snare:
         'https://petersimpson.me/hosting/drum_machine_assets/wtc/wtc_snare.wav',
+    Instrument.Clap:
+        'https://petersimpson.me/hosting/drum_machine_assets/wtc/808_clap.wav'
   },
   Kit.Trap: {
     Instrument.Kick:
@@ -29,12 +32,15 @@ const Map<Kit, Map<Instrument, String>> kInstrumentAudioPaths = {
         'https://petersimpson.me/hosting/drum_machine_assets/trap/trap_cymb.wav',
     Instrument.Snare:
         'https://petersimpson.me/hosting/drum_machine_assets/trap/trap_snare.wav',
+    Instrument.Clap:
+        'https://petersimpson.me/hosting/drum_machine_assets/trap/trap_clap.wav'
   },
 };
 
 const Map<Instrument, String> kInstrumentNameMap = {
   Instrument.Kick: 'KICK',
   Instrument.Snare: 'SNARE',
+  Instrument.Clap: 'CLAP',
   Instrument.Cymbal: 'HI-HAT',
 };
 
@@ -90,8 +96,8 @@ const double kButtonMargin = 10;
 const double kBorderRadius = 10;
 const double kBPMDigitBoxWidth = 35;
 const double kBPMDigitMargin = 2;
-const double kButtonHeight = 85;
-const double kPageEdgeMargin = 40;
+const double kButtonHeight = 80;
+const double kPageEdgeMargin = 20;
 const double kInstrumentButtonIconSize = 20;
 const double kSmallLEDSize = 15;
 const double kKitSelectorButtonLength = 125;

@@ -19,9 +19,9 @@ class _DrumMachineState extends State<DrumMachine> {
   Widget build(BuildContext context) {
     return Container(
       color: kBackgroundColor,
-      padding: EdgeInsets.symmetric(horizontal: kPageEdgeMargin, vertical: 10),
+      padding: EdgeInsets.symmetric(horizontal: kPageEdgeMargin, vertical: 5),
       child: Container(
-        margin: EdgeInsets.only(bottom: 40),
+        margin: EdgeInsets.only(bottom: kPageEdgeMargin),
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
           color: kForegroundColor,
@@ -40,6 +40,10 @@ class _DrumMachineState extends State<DrumMachine> {
               height: kButtonMargin,
             ),
             InstrumentReadout(instrument: Instrument.Snare),
+            SizedBox(
+              height: kButtonMargin,
+            ),
+            InstrumentReadout(instrument: Instrument.Clap),
             SizedBox(
               height: kButtonMargin,
             ),

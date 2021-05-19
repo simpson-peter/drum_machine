@@ -1,7 +1,6 @@
 import 'package:drum_machine/constants.dart';
 import 'package:drum_machine/widgets/bpm/bpm_modulator.dart';
 import 'package:drum_machine/widgets/bpm/bpm_readout_digit.dart';
-import 'package:drum_machine/constants.dart';
 import 'package:flutter/material.dart';
 
 class BPMReadout extends StatefulWidget {
