@@ -23,6 +23,7 @@ class _InstrumentButtonState extends State<InstrumentButton> {
   @override
   Widget build(BuildContext context) {
     return MachineButton(
+      borderRadius: kBorderRadius,
       margin: EdgeInsets.only(left: kButtonMargin),
       child: GestureDetector(
         onTap: () {

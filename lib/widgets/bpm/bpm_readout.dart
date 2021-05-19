@@ -32,7 +32,8 @@ class _BPMReadoutState extends State<BPMReadout> {
             width: 1,
           ),
           Container(
-            padding: EdgeInsets.all(kButtonMargin),
+            padding: EdgeInsets.symmetric(
+                horizontal: kButtonMargin, vertical: kButtonMargin * 1.5),
             height: kButtonHeight,
             decoration: BoxDecoration(
               color: kButtonColor,
