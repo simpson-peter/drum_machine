@@ -1,17 +1,16 @@
 import 'package:drum_machine/data/app_data.dart';
 import 'package:drum_machine/widgets/drum_machine.dart';
 import 'package:flutter/material.dart';
-import 'constants.dart';
 import 'package:provider/provider.dart';
 
 /*
 * MAJOR TODOs
 * TODO: Fix bug where rapidly playing/pausing screws up beat counting
+* TODO: Fix stutter on initial playback after a long period of non-use
 * TODO: Add more drum packs
 * TOOD: Remove Halo from BPMModulator
-* TODO: Remove outline from around play/pause container
 * TODO: Logo looks washed-out against background
-* TODO: Right edge of BeatReadout isn't rounded
+* TODO: Bottom Right corner of BeatReadout isn't rounded
 */
 
 void main() {
