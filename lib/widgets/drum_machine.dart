@@ -14,21 +14,22 @@ class DrumMachine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Check for incompatible browser, display error message if found.
-    if (Browser().browser != 'Chrome' && Browser().browser != 'Firefox') {
-      return Center(
-        child: Container(
-          padding: EdgeInsets.all(10),
-          color: Colors.red,
-          child: Text(
-            'Apologies. Our audio player does not work on your browser. Please use Firefox or Chrome.',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-            ),
-          ),
-        ),
-      );
-    }
+    //Commented out due to causing crashing in production
+    // if (Browser().browser != 'Chrome' && Browser().browser != 'Firefox') {
+    //   return Center(
+    //     child: Container(
+    //       padding: EdgeInsets.all(10),
+    //       color: Colors.red,
+    //       child: Text(
+    //         'Apologies. Our audio player does not work on your browser. Please use Firefox or Chrome.',
+    //         style: TextStyle(
+    //           color: Colors.white,
+    //           fontSize: 24,
+    //         ),
+    //       ),
+    //     ),
+    //   );
+    // }
     return Container(
       color: kBackgroundColor,
       padding: EdgeInsets.symmetric(horizontal: kPageEdgeMargin, vertical: 5),
