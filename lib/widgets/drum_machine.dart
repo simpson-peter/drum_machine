@@ -9,12 +9,7 @@ import 'package:provider/provider.dart';
 
 import 'logo.dart';
 
-class DrumMachine extends StatefulWidget {
-  @override
-  _DrumMachineState createState() => _DrumMachineState();
-}
-
-class _DrumMachineState extends State<DrumMachine> {
+class DrumMachine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

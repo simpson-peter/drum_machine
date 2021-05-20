@@ -2,6 +2,7 @@ import 'package:drum_machine/data/app_data.dart';
 import 'package:drum_machine/widgets/drum_machine.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:web_browser_detect/web_browser_detect.dart';
 
 /*
 * MAJOR TODOs
@@ -10,6 +11,7 @@ import 'package:provider/provider.dart';
 * TOOD: Remove Halo from BPMModulator
 * TODO: Logo looks washed-out against background
 * TODO: Bottom Right corner of BeatReadout isn't rounded
+* TODO: Make it mobile responsive
 */
 
 void main() {
