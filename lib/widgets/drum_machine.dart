@@ -13,6 +13,7 @@ import 'logo.dart';
 class DrumMachine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //Check for incompatible browser, display error message if found.
     if (Browser().browser != 'Chrome' && Browser().browser != 'Firefox') {
       return Center(
         child: Container(
