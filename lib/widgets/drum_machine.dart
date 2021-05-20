@@ -6,12 +6,28 @@ import 'package:drum_machine/widgets/instrument/instrument_readout.dart';
 import 'package:drum_machine/widgets/kit/kit_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:web_browser_detect/web_browser_detect.dart';
 
 import 'logo.dart';
 
 class DrumMachine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    if (Browser().browser != 'Chrome' && Browser().browser != 'Firefox') {
+      return Center(
+        child: Container(
+          padding: EdgeInsets.all(10),
+          color: Colors.red,
+          child: Text(
+            'Apologies. Our audio player does not work on your browser. Please use Firefox or Chrome.',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 24,
+            ),
+          ),
+        ),
+      );
+    }
     return Container(
       color: kBackgroundColor,
       padding: EdgeInsets.symmetric(horizontal: kPageEdgeMargin, vertical: 5),
